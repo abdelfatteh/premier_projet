@@ -20,9 +20,10 @@ public class controller {
 
 private produitdao produitdao ;
 @GetMapping(value="produits")
-public List<produit> listproduits(){
+public List<produit> listproduits(){	
 	return produitdao.finAll();
 }
+//ajouter un produit
 @GetMapping(value="produit/{id}")
 public produit afficheproduit (@PathVariable int id) {
 
