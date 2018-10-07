@@ -27,7 +27,11 @@ public List<produit> listproduits(){
 @GetMapping(value="produit/{id}")
 public produit afficheproduit (@PathVariable int id) {
 
-return produitdao.findBYID(id) ;
+	 produit produi = produitdao.findById(id);
+
+    if(produi==null) throw new ProduitIntrouvableException(+ id + " n'exist pas");
+
+    return produi;
 
 }
 	@PostMapping(value="/produits")
