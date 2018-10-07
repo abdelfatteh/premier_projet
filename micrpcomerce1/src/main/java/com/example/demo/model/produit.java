@@ -1,9 +1,11 @@
 package com.example.demo.model;
-
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
-@JsonIgnoreProperties(value= {"prixDachat","id"})
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+//@JsonIgnoreProperties(value= {"prixDachat","id"})
+@Entity
 public class produit {
+	@Id @GeneratedValue
 private int id ;
 private String nom;
 private double prix ;
