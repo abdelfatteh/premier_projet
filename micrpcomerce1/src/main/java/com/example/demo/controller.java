@@ -55,4 +55,5 @@ public produit afficheproduit (@PathVariable int id) {
 	return produitdao.findbprixgriterThan(500) ;
 
 	}
+	
 }
